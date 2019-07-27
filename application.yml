@@ -15,4 +15,4 @@ spring:
   profiles: test #测试环境
   application:
     name: microservicecloud-config-lptxyl-test
-#请保存为 UTF-8 格式
+#请保存为 UTF-8 格式 
