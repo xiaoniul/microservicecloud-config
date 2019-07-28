@@ -23,7 +23,7 @@ spring:
       max-wait-millis: 200
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.lptxyl.springcloud.entities
+  type-aliases-package: com.lptxyl.springcloud.entity
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml
 eureka:
@@ -58,7 +58,7 @@ spring:
       max-wait-millis: 200
 mybaits:
   config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.lptxyl.springcloud.entities
+  type-aliases-package: com.lptxyl.springcloud.entity
   mapper-locations:
   - classpath:mybatis/mapper/**/*.xml
   
