@@ -25,7 +25,7 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.lptxyl.springcloud.entity
   mapper-locations:
-  - classpath: mybatis/mapper/**/*.xml
+  - classpath:mybatis/mapper/**/*.xml
 eureka:
   client:
     service-url:
@@ -60,7 +60,7 @@ mybaits:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.lptxyl.springcloud.entity
   mapper-locations:
-  - classpath: mybatis/mapper/**/*.xml
+  - classpath:mybatis/mapper/**/*.xml
   
 eureka:
   client:
