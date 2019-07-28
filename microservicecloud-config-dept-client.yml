@@ -1,0 +1,76 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.git.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: java
+    password: test
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.lptxyl.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+info:
+  app.name: lptxyl-microservicecloud-springcloudconfig01
+  company.name: www.lptxyl.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 8001
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB02
+    username: java
+    password: test
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+mybaits:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.lptxyl.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+info:
+  app.name: lptxyl-microservicecloud-springcloudconfig01
+  company.name: www.lptxyl.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
